@@ -82,6 +82,13 @@
             bindings = <&none &kp PRCNT &kp H &kp LS(W) &kp K &kp N4 &kp LS(I) &kp LS(L) &kp LS(E) &kp Z &kp J &kp N8 &kp N4 &kp U &kp N7 &kp Y &kp LS(P) &kp EXCL>;
             label = "DATA0";
         };
+
+        Data1: Data1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp A &kp N9 &kp N5 &kp M &kp A &kp C &kp D &kp O &kp N &kp A &kp L &kp D &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
+            label = "DATA1";
+        };
     };
 
     combos {
@@ -233,7 +240,7 @@
 
             bindings = <
 &trans  &kp EXCL  &kp AT          &Data2          &kp LS(LEFT_BRACE)  &kp LS(RIGHT_BRACE)    &kp CARET  &kp N7        &kp N8        &kp N9        &kp RPAR  &kp B
-&trans  &trans    &trans          &kp UP_ARROW    &kp LEFT_BRACKET    &kp RIGHT_BRACKET      &kp MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp BSLH  &trans
+&trans  &trans    &trans          &kp UP_ARROW    &kp LEFT_BRACKET    &kp RIGHT_BRACKET      &Data1     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp BSLH  &trans
 &trans  &trans    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp BACKSLASH       &kp PIPE               &Data0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PIPE  &kp ENTER
                                   &kp LGUI        &trans              &kp SPACE              &mo 4      &trans        &trans
             >;
